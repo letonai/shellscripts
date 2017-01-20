@@ -17,3 +17,23 @@ Scraps your current external ipaddress from meuip.com.br
 ```
 
 Scraps first entry on TOP of a specific Reddit thread
+
+```
+source message.sh
+```
+
+Small logger shell script library from log and better formating from scripts outputs.
+Logs all messages on a formatted log file with date and time
+Enable print messages on the screen with different colours or diret to log file
+Once script is imported it's will grap main script name to create a log file "script name".log unless LOG var is set
+
+```
+message ok "OK"
+message info "Information"
+message alert "Alert"
+message error "Error"
+message answer "Answer"
+message info "Info"
+message log "Just log"
+message <any> "Test #STR#"  "Highlited message"
+```
