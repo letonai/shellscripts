@@ -30,6 +30,8 @@ add-apt-repository \
    stable"
 apt-get update
 apt-get -y install docker-ce docker-ce-cli containerd.io
+apt install -y python-pip
+
 echo "setting up no password for sudo and adding user $USER to docker group"
 sed -i 's/\(%sudo.*)\) /\1 NOPASSWD:/g' /etc/sudoers
 usermod -aG docker $USER
