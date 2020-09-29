@@ -31,7 +31,12 @@ add-apt-repository \
 apt-get update
 apt-get -y install docker-ce docker-ce-cli containerd.io
 apt install -y python-pip
-
+curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+#Get user that ran sudo from pid
+FPID=`ps -eaf | grep sudo | grep -v grep | awk '{print $3}'`
+USER=`ps -eaf | grep $FPID | grep -v $USER | awk '{print $1}'`
 echo "setting up no password for sudo and adding user $USER to docker group"
 sed -i 's/\(%sudo.*)\) /\1 NOPASSWD:/g' /etc/sudoers
 usermod -aG docker $USER

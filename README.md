@@ -44,5 +44,5 @@ installs:
   - Setup sudo NOPASSWD for the current user
   - install docker
 ```
-wget  -O- https://raw.githubusercontent.com/letonai/shellscripts/master/setup.sh | sudo bash
+wget  -qO- https://raw.githubusercontent.com/letonai/shellscripts/master/setup.sh | sudo bash
 ```
