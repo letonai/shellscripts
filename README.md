@@ -37,3 +37,12 @@ message info "Info"
 message log "Just log"
 message <any> "Test #STR#"  "Highlited message"
 ```
+
+Setups a server from scrach:
+installs:
+  - VIM
+  - Setup sudo NOPASSWD for the current user
+  - install docker
+```
+wget  -O- https://raw.githubusercontent.com/letonai/shellscripts/master/setup.sh | sudo bash
+```
