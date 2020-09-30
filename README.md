@@ -39,10 +39,14 @@ message <any> "Test #STR#"  "Highlited message"
 ```
 
 Setups a server from scrach:
+
 installs:
   - VIM
+  - pip
   - Setup sudo NOPASSWD for the current user
   - install docker
+  - Docker-compose
+
 ```
 wget  -qO- https://raw.githubusercontent.com/letonai/shellscripts/master/setup.sh | sudo bash
 ```
